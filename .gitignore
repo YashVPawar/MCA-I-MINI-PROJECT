@@ -1,0 +1,16 @@
+# Build output
+**/target/
+**/dist/
+**/node_modules/
+/MEDROUTE/backend/bin/
+*.class
+
+# Local logs and environment settings
+*.log
+.env
+.env.*
+!.env.example
+
+# Local editor and operating-system files
+.DS_Store
+Thumbs.db

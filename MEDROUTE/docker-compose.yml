@@ -1,0 +1,15 @@
+services:
+  db:
+    image: pgrouting/pgrouting:latest
+    environment:
+      POSTGRES_DB: medroute
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - medroute-data:/var/lib/postgresql/data
+      - ./data/init.sql:/docker-entrypoint-initdb.d/010-medroute.sql:ro
+
+volumes:
+  medroute-data:
